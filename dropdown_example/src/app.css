@@ -1,0 +1,74 @@
+:root {
+  --changed-col: #f0ebd8;
+}
+
+.bg-background {
+  background: var(--background-color);
+}
+
+.ref-link {
+  position: relative;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 10%;
+  align-items: center;
+  column-gap: 20px;
+  overflow: hidden;
+}
+
+.ref-link:hover,
+.ref-link:visited,
+.ref-link:link,
+.ref-link:active {
+  text-decoration: none;
+  color: inherit;
+  color: var(--main-color);
+}
+
+.ref-link div {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ref-link .primary-icon {
+  position: relative;
+  top: 8px;
+  transition: 0.5s;
+}
+
+.ref-link .secondary-icon {
+  position: relative;
+  top: 20px;
+  color: var(--changed-col);
+  transition: 0.5s;
+}
+
+.ref-link h4 {
+  position: relative;
+  top: 0px;
+  left: 0;
+  display: block;
+  transition: 0.5s;
+}
+
+.ref-link h4::before {
+  content: attr(beforeData);
+  position: absolute;
+  top: -110%;
+  left: 0;
+  display: block;
+  color: var(--changed-col);
+}
+
+.ref-link:hover .primary-icon {
+  transform: translateY(-28px);
+}
+
+.ref-link:hover .secondary-icon {
+  transform: translateY(-28px);
+}
+
+.ref-link:hover h4 {
+  transform: translateY(30px);
+}
